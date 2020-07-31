@@ -2,14 +2,11 @@ package Stepsdefinitions;
 
 import java.util.concurrent.TimeUnit;
 
-import org.checkerframework.checker.units.qual.Luminance;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import FactoryPages.HomeWebstore;
 import FactoryPages.LUAPage;
-import PagesFactory.LoginPageLUA;
-import PagesFactory.WebstoreHomePage;
 import io.cucumber.java.en.*;
 import io.cucumber.java.en.When;
 
@@ -21,6 +18,7 @@ public class LoginSteps {
 	
 	@Given("browser is open")
 	public void browser_is_open() {
+		
 		System.setProperty("webdriver.chrome.driver", "C:/Users/61625336/git/TestingAutomation/ProyectoGitHub/src/test/resources/drivers/chromedriver/chromedriver.exe");
 		driver = new ChromeDriver();
 		
@@ -49,7 +47,7 @@ public class LoginSteps {
 	public void enters_username_and_password() {
 	    
 		login=new LUAPage(driver);
-		login.enterUsername("adminqa");
+		login.enterUsername("adm");
 		login.enterPassword("password");
 	}
 
